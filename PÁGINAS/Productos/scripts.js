@@ -35,6 +35,7 @@ window.addEventListener("resize", function(){
     }
 })
 
+
 /*IMAGENES */
 
 const grid = new Muuri('.grid', {
@@ -96,8 +97,28 @@ window.addEventListener('load', () => {
         evento.target.id === 'overlay' ? overlay.classList.remove('activo') : '';
     });
 
-    
 });
+
+
+/*ACTUALIZACIÓN-----------------1.1*/var caja=document.getElementById("ir_arriba");
+caja.addEventListener("click",function(){
+    document.documentElement.scrollTop=0;
+})
+
+window.addEventListener("scroll",function(){
+    if (document.documentElement.scrollTop > 1100) { //cuando es mayor al valor se activa con la animación a sacala de 1 
+        caja.style.transform = "scale(1)";
+    } else {
+        caja.style.transform = "scale(0)"; //cuando es menor al valor se desactiva con la animación a scala de 0
+    }
+})
+
+
+
+
+
+
+
 
 
 
